@@ -37,10 +37,18 @@ namespace CppCLRWinformsProjekt {
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label_result;
-	private: System::Windows::Forms::NumericUpDown^ value_current;
-	private: System::Windows::Forms::NumericUpDown^ value_previous;
-	private: System::Windows::Forms::NumericUpDown^ value_price;
+
+
+
 	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::TextBox^ value_previous;
+	private: System::Windows::Forms::TextBox^ value_current;
+	private: System::Windows::Forms::TextBox^ value_price;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::Label^ label8;
+
 
 	protected:
 
@@ -63,18 +71,21 @@ namespace CppCLRWinformsProjekt {
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label_result = (gcnew System::Windows::Forms::Label());
-			this->value_current = (gcnew System::Windows::Forms::NumericUpDown());
-			this->value_previous = (gcnew System::Windows::Forms::NumericUpDown());
-			this->value_price = (gcnew System::Windows::Forms::NumericUpDown());
 			this->label4 = (gcnew System::Windows::Forms::Label());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->value_current))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->value_previous))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->value_price))->BeginInit();
+			this->value_previous = (gcnew System::Windows::Forms::TextBox());
+			this->value_current = (gcnew System::Windows::Forms::TextBox());
+			this->value_price = (gcnew System::Windows::Forms::TextBox());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// button_calculate
 			// 
-			this->button_calculate->BackColor = System::Drawing::SystemColors::MenuHighlight;
+			this->button_calculate->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->button_calculate->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
 			this->button_calculate->Location = System::Drawing::Point(15, 164);
 			this->button_calculate->Name = L"button_calculate";
 			this->button_calculate->Size = System::Drawing::Size(129, 49);
@@ -123,44 +134,12 @@ namespace CppCLRWinformsProjekt {
 			// 
 			this->label_result->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label_result->Location = System::Drawing::Point(51, 142);
+			this->label_result->Location = System::Drawing::Point(57, 137);
 			this->label_result->Name = L"label_result";
-			this->label_result->Size = System::Drawing::Size(335, 20);
+			this->label_result->Size = System::Drawing::Size(158, 20);
 			this->label_result->TabIndex = 7;
 			this->label_result->Text = L"0";
-			// 
-			// value_current
-			// 
-			this->value_current->BackColor = System::Drawing::SystemColors::MenuHighlight;
-			this->value_current->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->value_current->Location = System::Drawing::Point(234, 63);
-			this->value_current->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
-			this->value_current->Name = L"value_current";
-			this->value_current->Size = System::Drawing::Size(233, 20);
-			this->value_current->TabIndex = 8;
-			// 
-			// value_previous
-			// 
-			this->value_previous->BackColor = System::Drawing::SystemColors::MenuHighlight;
-			this->value_previous->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->value_previous->Location = System::Drawing::Point(234, 31);
-			this->value_previous->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 100000, 0, 0, 0 });
-			this->value_previous->Name = L"value_previous";
-			this->value_previous->Size = System::Drawing::Size(233, 20);
-			this->value_previous->TabIndex = 9;
-			// 
-			// value_price
-			// 
-			this->value_price->BackColor = System::Drawing::SystemColors::MenuHighlight;
-			this->value_price->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->value_price->Location = System::Drawing::Point(234, 98);
-			this->value_price->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
-			this->value_price->Name = L"value_price";
-			this->value_price->Size = System::Drawing::Size(233, 20);
-			this->value_price->TabIndex = 10;
+			this->label_result->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			// 
 			// label4
 			// 
@@ -173,16 +152,100 @@ namespace CppCLRWinformsProjekt {
 			this->label4->TabIndex = 11;
 			this->label4->Text = L"»тог:";
 			// 
+			// value_previous
+			// 
+			this->value_previous->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->value_previous->Location = System::Drawing::Point(304, 30);
+			this->value_previous->Name = L"value_previous";
+			this->value_previous->Size = System::Drawing::Size(127, 20);
+			this->value_previous->TabIndex = 12;
+			this->value_previous->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->value_previous->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Calculator::value_previous_KeyPress);
+			// 
+			// value_current
+			// 
+			this->value_current->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->value_current->Location = System::Drawing::Point(304, 62);
+			this->value_current->Name = L"value_current";
+			this->value_current->Size = System::Drawing::Size(127, 20);
+			this->value_current->TabIndex = 13;
+			this->value_current->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->value_current->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Calculator::value_current_KeyPress);
+			// 
+			// value_price
+			// 
+			this->value_price->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->value_price->Location = System::Drawing::Point(304, 97);
+			this->value_price->Name = L"value_price";
+			this->value_price->Size = System::Drawing::Size(127, 20);
+			this->value_price->TabIndex = 14;
+			this->value_price->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->value_price->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Calculator::value_price_KeyPress);
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label5->Location = System::Drawing::Point(434, 103);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(31, 13);
+			this->label5->TabIndex = 15;
+			this->label5->Text = L"руб.";
+			this->label5->Click += gcnew System::EventHandler(this, &Calculator::label5_Click);
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label6->Location = System::Drawing::Point(434, 68);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(28, 13);
+			this->label6->TabIndex = 16;
+			this->label6->Text = L"к¬т";
+			this->label6->TextAlign = System::Drawing::ContentAlignment::BottomRight;
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label7->Location = System::Drawing::Point(434, 36);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(28, 13);
+			this->label7->TabIndex = 17;
+			this->label7->Text = L"к¬т";
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label8->Location = System::Drawing::Point(214, 141);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(104, 13);
+			this->label8->TabIndex = 18;
+			this->label8->Text = L"рублей к оплате";
+			this->label8->Click += gcnew System::EventHandler(this, &Calculator::label8_Click);
+			// 
 			// Calculator
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->ClientSize = System::Drawing::Size(485, 380);
-			this->Controls->Add(this->label4);
+			this->Controls->Add(this->label8);
+			this->Controls->Add(this->label7);
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->label5);
 			this->Controls->Add(this->value_price);
-			this->Controls->Add(this->value_previous);
 			this->Controls->Add(this->value_current);
+			this->Controls->Add(this->value_previous);
+			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label_result);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
@@ -192,9 +255,6 @@ namespace CppCLRWinformsProjekt {
 			this->Name = L"Calculator";
 			this->Text = L"Calculator";
 			this->Load += gcnew System::EventHandler(this, &Calculator::Form1_Load);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->value_current))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->value_previous))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->value_price))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -204,7 +264,6 @@ namespace CppCLRWinformsProjekt {
 	{
 		// onFormLoaded
 	}
-
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		//onCalculateButtonClick
@@ -231,11 +290,36 @@ namespace CppCLRWinformsProjekt {
 	}
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
-		// NO NEED THIS
+		//NO NEED THIS EVENT
 	}
 	private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		//NO NEED THIS EVENT
+	}
+	private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) 
+	{
+		//NO NEED THIS EVENT
+	}
+	private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e)  
+	{
+		//NO NEED THIS EVENT
+	}
+
+	// блокировка ввода букв дл€ value_previous, value_current и value_price
+	private: System::Void value_previous_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) 
+	{
+		if ((e->KeyChar < 48 || e->KeyChar > 57) && (e->KeyChar != '\b') && (e->KeyChar != 44))
+			e->Handled = true;
+	}
+	private: System::Void value_current_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) 
+	{
+		if ((e->KeyChar < 48 || e->KeyChar > 57) && (e->KeyChar != '\b') && (e->KeyChar != 44))
+			e->Handled = true;
+	}
+	private: System::Void value_price_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) 
+	{
+		if ((e->KeyChar < 48 || e->KeyChar > 57) && (e->KeyChar != '\b') && (e->KeyChar != 44))
+			e->Handled = true;
 	}
 };
 }
