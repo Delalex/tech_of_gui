@@ -1,0 +1,3 @@
+C:\Users\Delalex\Desktop\Учеба\ТП\ЛР_3\DelPerfileva_lr3\DelPerfileva_lr3\Debug\DelPerfileva_lr3.vcxproj.AssemblyReference.cache
+C:\Users\Delalex\Desktop\Учеба\ТП\ЛР_3\DelPerfileva_lr3\DelPerfileva_lr3\Debug\DelPerfileva_lr3.vcxproj.GenerateResource.cache
+C:\Users\Delalex\Desktop\Учеба\ТП\ЛР_3\DelPerfileva_lr3\DelPerfileva_lr3\Debug\DelPerfileva_lr3.Calculator.resources
