@@ -50,6 +50,7 @@ namespace CppCLRWinformsProjekt {
 	private: System::Windows::Forms::Label^ label8;
 
 
+
 	protected:
 
 	protected:
@@ -84,11 +85,11 @@ namespace CppCLRWinformsProjekt {
 			// button_calculate
 			// 
 			this->button_calculate->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->button_calculate->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->button_calculate->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button_calculate->Location = System::Drawing::Point(15, 164);
+			this->button_calculate->Location = System::Drawing::Point(16, 183);
 			this->button_calculate->Name = L"button_calculate";
-			this->button_calculate->Size = System::Drawing::Size(129, 49);
+			this->button_calculate->Size = System::Drawing::Size(156, 51);
 			this->button_calculate->TabIndex = 0;
 			this->button_calculate->Text = L"Рассчитать";
 			this->button_calculate->UseVisualStyleBackColor = false;
@@ -97,12 +98,12 @@ namespace CppCLRWinformsProjekt {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label1->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->label1->Location = System::Drawing::Point(12, 33);
+			this->label1->Location = System::Drawing::Point(12, 14);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(211, 13);
+			this->label1->Size = System::Drawing::Size(346, 24);
 			this->label1->TabIndex = 4;
 			this->label1->Text = L"Предыдущее показание счетчика:";
 			this->label1->Click += gcnew System::EventHandler(this, &Calculator::label1_Click);
@@ -110,11 +111,11 @@ namespace CppCLRWinformsProjekt {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label2->Location = System::Drawing::Point(12, 65);
+			this->label2->Location = System::Drawing::Point(12, 49);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(187, 13);
+			this->label2->Size = System::Drawing::Size(303, 24);
 			this->label2->TabIndex = 5;
 			this->label2->Text = L"Текущее показание счетчика:";
 			this->label2->Click += gcnew System::EventHandler(this, &Calculator::label2_Click);
@@ -122,21 +123,21 @@ namespace CppCLRWinformsProjekt {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label3->Location = System::Drawing::Point(12, 100);
+			this->label3->Location = System::Drawing::Point(12, 90);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(139, 13);
+			this->label3->Size = System::Drawing::Size(223, 24);
 			this->label3->TabIndex = 6;
 			this->label3->Text = L"Цена в рублях за кВт:";
 			// 
 			// label_result
 			// 
-			this->label_result->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label_result->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label_result->Location = System::Drawing::Point(57, 137);
+			this->label_result->Location = System::Drawing::Point(81, 132);
 			this->label_result->Name = L"label_result";
-			this->label_result->Size = System::Drawing::Size(158, 20);
+			this->label_result->Size = System::Drawing::Size(298, 20);
 			this->label_result->TabIndex = 7;
 			this->label_result->Text = L"0";
 			this->label_result->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -144,43 +145,43 @@ namespace CppCLRWinformsProjekt {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label4->Location = System::Drawing::Point(12, 141);
+			this->label4->Location = System::Drawing::Point(12, 131);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(39, 13);
+			this->label4->Size = System::Drawing::Size(63, 24);
 			this->label4->TabIndex = 11;
 			this->label4->Text = L"Итог:";
 			// 
 			// value_previous
 			// 
-			this->value_previous->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->value_previous->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->value_previous->Location = System::Drawing::Point(304, 30);
+			this->value_previous->Location = System::Drawing::Point(378, 11);
 			this->value_previous->Name = L"value_previous";
-			this->value_previous->Size = System::Drawing::Size(127, 20);
+			this->value_previous->Size = System::Drawing::Size(127, 29);
 			this->value_previous->TabIndex = 12;
 			this->value_previous->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			this->value_previous->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Calculator::value_previous_KeyPress);
 			// 
 			// value_current
 			// 
-			this->value_current->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->value_current->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->value_current->Location = System::Drawing::Point(304, 62);
+			this->value_current->Location = System::Drawing::Point(378, 48);
 			this->value_current->Name = L"value_current";
-			this->value_current->Size = System::Drawing::Size(127, 20);
+			this->value_current->Size = System::Drawing::Size(127, 29);
 			this->value_current->TabIndex = 13;
 			this->value_current->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			this->value_current->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Calculator::value_current_KeyPress);
 			// 
 			// value_price
 			// 
-			this->value_price->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->value_price->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->value_price->Location = System::Drawing::Point(304, 97);
+			this->value_price->Location = System::Drawing::Point(378, 85);
 			this->value_price->Name = L"value_price";
-			this->value_price->Size = System::Drawing::Size(127, 20);
+			this->value_price->Size = System::Drawing::Size(127, 29);
 			this->value_price->TabIndex = 14;
 			this->value_price->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			this->value_price->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Calculator::value_price_KeyPress);
@@ -188,11 +189,11 @@ namespace CppCLRWinformsProjekt {
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label5->Location = System::Drawing::Point(434, 103);
+			this->label5->Location = System::Drawing::Point(511, 86);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(31, 13);
+			this->label5->Size = System::Drawing::Size(50, 24);
 			this->label5->TabIndex = 15;
 			this->label5->Text = L"руб.";
 			this->label5->Click += gcnew System::EventHandler(this, &Calculator::label5_Click);
@@ -200,11 +201,11 @@ namespace CppCLRWinformsProjekt {
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label6->Location = System::Drawing::Point(434, 68);
+			this->label6->Location = System::Drawing::Point(511, 50);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(28, 13);
+			this->label6->Size = System::Drawing::Size(44, 24);
 			this->label6->TabIndex = 16;
 			this->label6->Text = L"кВт";
 			this->label6->TextAlign = System::Drawing::ContentAlignment::BottomRight;
@@ -212,22 +213,22 @@ namespace CppCLRWinformsProjekt {
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label7->Location = System::Drawing::Point(434, 36);
+			this->label7->Location = System::Drawing::Point(511, 13);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(28, 13);
+			this->label7->Size = System::Drawing::Size(44, 24);
 			this->label7->TabIndex = 17;
 			this->label7->Text = L"кВт";
 			// 
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label8->Location = System::Drawing::Point(214, 141);
+			this->label8->Location = System::Drawing::Point(385, 131);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(104, 13);
+			this->label8->Size = System::Drawing::Size(170, 24);
 			this->label8->TabIndex = 18;
 			this->label8->Text = L"рублей к оплате";
 			this->label8->Click += gcnew System::EventHandler(this, &Calculator::label8_Click);
@@ -237,7 +238,7 @@ namespace CppCLRWinformsProjekt {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->ClientSize = System::Drawing::Size(485, 380);
+			this->ClientSize = System::Drawing::Size(768, 411);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label6);
@@ -285,8 +286,11 @@ namespace CppCLRWinformsProjekt {
 		if (price_lenght > 0)
 			price = Convert::ToInt32(value_price->Text);
 	
-		//вывод результата
-		label_result->Text = Convert::ToString((current_value - previous_value) * price);
+		//вывод результата только если показания счетчиков верны
+		if (previous_value < current_value)
+		{
+			label_result->Text = Convert::ToString((current_value - previous_value) * price);
+		}
 	}
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
@@ -321,5 +325,7 @@ namespace CppCLRWinformsProjekt {
 		if ((e->KeyChar < 48 || e->KeyChar > 57) && (e->KeyChar != '\b') && (e->KeyChar != 44))
 			e->Handled = true;
 	}
+private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
