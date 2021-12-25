@@ -49,6 +49,9 @@ namespace CppCLRWinformsProjekt {
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::PictureBox^ GifBox;
+	private: System::Windows::Forms::Button^ btn_go_tree;
+
+
 
 
 
@@ -83,6 +86,7 @@ namespace CppCLRWinformsProjekt {
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->GifBox = (gcnew System::Windows::Forms::PictureBox());
+			this->btn_go_tree = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GifBox))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -90,9 +94,10 @@ namespace CppCLRWinformsProjekt {
 			// 
 			this->button_calculate->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(7)), static_cast<System::Int32>(static_cast<System::Byte>(155)),
 				static_cast<System::Int32>(static_cast<System::Byte>(155)));
-			this->button_calculate->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->button_calculate->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->button_calculate->ForeColor = System::Drawing::Color::White;
+			this->button_calculate->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(7)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
 			this->button_calculate->Location = System::Drawing::Point(16, 183);
 			this->button_calculate->Name = L"button_calculate";
 			this->button_calculate->Size = System::Drawing::Size(156, 51);
@@ -105,13 +110,13 @@ namespace CppCLRWinformsProjekt {
 			// 
 			this->label1->AutoSize = true;
 			this->label1->BackColor = System::Drawing::Color::Transparent;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(7)), static_cast<System::Int32>(static_cast<System::Byte>(155)),
 				static_cast<System::Int32>(static_cast<System::Byte>(155)));
 			this->label1->Location = System::Drawing::Point(12, 14);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(346, 24);
+			this->label1->Size = System::Drawing::Size(337, 27);
 			this->label1->TabIndex = 4;
 			this->label1->Text = L"ѕредыдущее показание счетчика:";
 			this->label1->Click += gcnew System::EventHandler(this, &Calculator::label1_Click);
@@ -120,13 +125,13 @@ namespace CppCLRWinformsProjekt {
 			// 
 			this->label2->AutoSize = true;
 			this->label2->BackColor = System::Drawing::Color::Transparent;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label2->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(7)), static_cast<System::Int32>(static_cast<System::Byte>(155)),
 				static_cast<System::Int32>(static_cast<System::Byte>(155)));
 			this->label2->Location = System::Drawing::Point(12, 49);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(303, 24);
+			this->label2->Size = System::Drawing::Size(295, 27);
 			this->label2->TabIndex = 5;
 			this->label2->Text = L"“екущее показание счетчика:";
 			this->label2->Click += gcnew System::EventHandler(this, &Calculator::label2_Click);
@@ -135,26 +140,26 @@ namespace CppCLRWinformsProjekt {
 			// 
 			this->label3->AutoSize = true;
 			this->label3->BackColor = System::Drawing::Color::Transparent;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label3->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(7)), static_cast<System::Int32>(static_cast<System::Byte>(155)),
 				static_cast<System::Int32>(static_cast<System::Byte>(155)));
 			this->label3->Location = System::Drawing::Point(12, 90);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(223, 24);
+			this->label3->Size = System::Drawing::Size(223, 27);
 			this->label3->TabIndex = 6;
 			this->label3->Text = L"÷ена в рубл€х за к¬т:";
 			// 
 			// label_result
 			// 
 			this->label_result->BackColor = System::Drawing::Color::Transparent;
-			this->label_result->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label_result->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label_result->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(7)), static_cast<System::Int32>(static_cast<System::Byte>(155)),
 				static_cast<System::Int32>(static_cast<System::Byte>(155)));
-			this->label_result->Location = System::Drawing::Point(81, 132);
+			this->label_result->Location = System::Drawing::Point(86, 133);
 			this->label_result->Name = L"label_result";
-			this->label_result->Size = System::Drawing::Size(298, 20);
+			this->label_result->Size = System::Drawing::Size(298, 26);
 			this->label_result->TabIndex = 7;
 			this->label_result->Text = L"0";
 			this->label_result->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
@@ -163,13 +168,13 @@ namespace CppCLRWinformsProjekt {
 			// 
 			this->label4->AutoSize = true;
 			this->label4->BackColor = System::Drawing::Color::Transparent;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label4->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(7)), static_cast<System::Int32>(static_cast<System::Byte>(155)),
 				static_cast<System::Int32>(static_cast<System::Byte>(155)));
 			this->label4->Location = System::Drawing::Point(12, 131);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(63, 24);
+			this->label4->Size = System::Drawing::Size(63, 27);
 			this->label4->TabIndex = 11;
 			this->label4->Text = L"»тог:";
 			// 
@@ -222,13 +227,13 @@ namespace CppCLRWinformsProjekt {
 			// 
 			this->label5->AutoSize = true;
 			this->label5->BackColor = System::Drawing::Color::Transparent;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label5->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(7)), static_cast<System::Int32>(static_cast<System::Byte>(155)),
 				static_cast<System::Int32>(static_cast<System::Byte>(155)));
 			this->label5->Location = System::Drawing::Point(702, 86);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(50, 24);
+			this->label5->Size = System::Drawing::Size(51, 27);
 			this->label5->TabIndex = 15;
 			this->label5->Text = L"руб.";
 			this->label5->Click += gcnew System::EventHandler(this, &Calculator::label5_Click);
@@ -237,13 +242,13 @@ namespace CppCLRWinformsProjekt {
 			// 
 			this->label6->AutoSize = true;
 			this->label6->BackColor = System::Drawing::Color::Transparent;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label6->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label6->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(7)), static_cast<System::Int32>(static_cast<System::Byte>(155)),
 				static_cast<System::Int32>(static_cast<System::Byte>(155)));
 			this->label6->Location = System::Drawing::Point(702, 50);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(44, 24);
+			this->label6->Size = System::Drawing::Size(42, 27);
 			this->label6->TabIndex = 16;
 			this->label6->Text = L"к¬т";
 			this->label6->TextAlign = System::Drawing::ContentAlignment::BottomRight;
@@ -252,13 +257,13 @@ namespace CppCLRWinformsProjekt {
 			// 
 			this->label7->AutoSize = true;
 			this->label7->BackColor = System::Drawing::Color::Transparent;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label7->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(7)), static_cast<System::Int32>(static_cast<System::Byte>(155)),
 				static_cast<System::Int32>(static_cast<System::Byte>(155)));
 			this->label7->Location = System::Drawing::Point(702, 13);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(44, 24);
+			this->label7->Size = System::Drawing::Size(42, 27);
 			this->label7->TabIndex = 17;
 			this->label7->Text = L"к¬т";
 			// 
@@ -266,13 +271,13 @@ namespace CppCLRWinformsProjekt {
 			// 
 			this->label8->AutoSize = true;
 			this->label8->BackColor = System::Drawing::Color::Transparent;
-			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label8->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label8->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(7)), static_cast<System::Int32>(static_cast<System::Byte>(155)),
 				static_cast<System::Int32>(static_cast<System::Byte>(155)));
 			this->label8->Location = System::Drawing::Point(385, 131);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(170, 24);
+			this->label8->Size = System::Drawing::Size(169, 27);
 			this->label8->TabIndex = 18;
 			this->label8->Text = L"рублей к оплате";
 			this->label8->Click += gcnew System::EventHandler(this, &Calculator::label8_Click);
@@ -280,19 +285,37 @@ namespace CppCLRWinformsProjekt {
 			// GifBox
 			// 
 			this->GifBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->GifBox->Location = System::Drawing::Point(496, 232);
+			this->GifBox->Location = System::Drawing::Point(597, 318);
 			this->GifBox->Name = L"GifBox";
 			this->GifBox->Size = System::Drawing::Size(272, 178);
 			this->GifBox->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->GifBox->TabIndex = 19;
 			this->GifBox->TabStop = false;
 			// 
+			// btn_go_tree
+			// 
+			this->btn_go_tree->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
+			this->btn_go_tree->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(7)), static_cast<System::Int32>(static_cast<System::Byte>(155)),
+				static_cast<System::Int32>(static_cast<System::Byte>(155)));
+			this->btn_go_tree->Font = (gcnew System::Drawing::Font(L"Comic Sans MS", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->btn_go_tree->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(7)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->btn_go_tree->Location = System::Drawing::Point(16, 445);
+			this->btn_go_tree->Name = L"btn_go_tree";
+			this->btn_go_tree->Size = System::Drawing::Size(156, 51);
+			this->btn_go_tree->TabIndex = 20;
+			this->btn_go_tree->Text = L"ƒерево";
+			this->btn_go_tree->UseVisualStyleBackColor = false;
+			this->btn_go_tree->Click += gcnew System::EventHandler(this, &Calculator::button1_Click_1);
+			// 
 			// Calculator
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->ClientSize = System::Drawing::Size(768, 411);
+			this->ClientSize = System::Drawing::Size(869, 497);
+			this->Controls->Add(this->btn_go_tree);
 			this->Controls->Add(this->GifBox);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label7);
@@ -387,5 +410,9 @@ private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArg
 }
 private: System::Void GifBox_Click(System::Object^  sender, System::EventArgs^  e) {
 }
+	private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) 
+	{
+		// переход к бинарному дереву
+	}
 };
 }
