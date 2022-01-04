@@ -1,4 +1,5 @@
 ﻿  BinaryTree.cpp
+  Calculator.cpp
   main.cpp
   Создание кода...
   AssemblyInfo.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
