@@ -1,0 +1,4 @@
+C:\Users\perfo\Desktop\tech_of_gui-main\DelPerfileva_lr3\DelPerfileva_lr3\x64\Debug\DelPerfileva_lr3.vcxproj.AssemblyReference.cache
+C:\Users\perfo\Desktop\tech_of_gui-main\DelPerfileva_lr3\DelPerfileva_lr3\x64\Debug\DelPerfileva_lr3.BinaryTree.resources
+C:\Users\perfo\Desktop\tech_of_gui-main\DelPerfileva_lr3\DelPerfileva_lr3\x64\Debug\DelPerfileva_lr3.Calculator.resources
+C:\Users\perfo\Desktop\tech_of_gui-main\DelPerfileva_lr3\DelPerfileva_lr3\x64\Debug\DelPerfileva_lr3.vcxproj.GenerateResource.cache

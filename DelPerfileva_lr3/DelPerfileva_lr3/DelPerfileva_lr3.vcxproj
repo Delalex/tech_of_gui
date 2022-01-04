@@ -143,6 +143,9 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BinaryTree.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Calculator.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -154,6 +157,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -173,6 +177,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BinaryTree.resx">
+      <DependentUpon>BinaryTree.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Calculator.resx">
       <DependentUpon>Calculator.h</DependentUpon>
     </EmbeddedResource>
